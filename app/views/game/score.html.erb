@@ -1,0 +1,20 @@
+
+<div class="container">
+
+  <h1 class="padded">Score</h1>
+
+
+  <p>your word: <%= @word %></p>
+
+  <ul>
+    <% @result.each do |key,value| %>
+      <li><%= key %> = <%= value %></li>
+    <% end %>
+
+  </ul>
+
+  <p>Number of Games: <%= session[:count_games] %></p>
+  <p> <%= session[:highscore] %></p>
+
+  <%= link_to "new game", game_grid_path, :class => "btn btn-primary" %>
+</div>
